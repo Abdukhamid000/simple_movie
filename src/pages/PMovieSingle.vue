@@ -2,7 +2,7 @@
   <div>
     <v-card>
       <v-btn :icon="liked ? 'mdi-heart' : 'mdi-heart-outline'" @click="toggle"></v-btn>
-      <v-img :src="movie.posterImage" :alt="`${movie.title} Poster`" height="400px" />
+      <v-img :src="movie.posterImage" :alt="`${movie.title} Poster`" height="500px" />
 
       <v-card-title>{{ movie.title }}</v-card-title>
       <v-card-subtitle>
