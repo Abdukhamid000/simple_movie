@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>Movie List</h1>
     <v-row class="mt-3">
-      <v-col v-for="movie in movieList" :key="movie.id" cols="12" md="4">
+      <template v-if="!favoriteMovies.length">No Favorite Movies</template>
+      <v-col v-for="movie in favoriteMovies" :key="movie.id" cols="12" md="4">
         <v-card>
           <v-img :src="movie.posterImage"></v-img>
           <v-card-title>{{ movie.title }}</v-card-title>
@@ -22,9 +22,8 @@
 import type { TMovieList } from '@/types'
 import type { Ref } from 'vue'
 
-import { inject } from 'vue'
+import { computed, inject } from 'vue'
 
 const movieList = inject<Ref<TMovieList>>('movieList')
+const favoriteMovies = computed(() => movieList!.value.filter((movie) => movie.isFavorite))
 </script>
-
-<style scoped></style>
