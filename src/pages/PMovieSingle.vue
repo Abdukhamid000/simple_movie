@@ -36,5 +36,6 @@ const liked = ref(movieList!.value[movieId.value].isFavorite)
 function toggle() {
   liked.value = !liked.value
   movieList!.value[movieId.value].isFavorite = true
+  localStorage.setItem('movies', JSON.stringify(movieList!.value))
 }
 </script>
