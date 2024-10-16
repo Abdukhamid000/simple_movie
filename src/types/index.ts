@@ -1,4 +1,4 @@
-export type TMovieList = {
+export type TMovie = {
   id: string
   title: string
   releaseDate: string
@@ -6,4 +6,4 @@ export type TMovieList = {
   description: string
   posterImage: string
   isFavorite: boolean
-}[]
+}

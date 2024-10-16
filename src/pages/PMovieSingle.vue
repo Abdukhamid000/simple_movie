@@ -20,14 +20,14 @@
 </template>
 
 <script setup lang="ts">
-import type { TMovieList } from '@/types'
+import type { TMovie } from '@/types'
 import type { Ref } from 'vue'
 
 import { ref, computed, inject } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
-const movieList = inject<Ref<TMovieList>>('movieList')
+const movieList = inject<Ref<TMovie[]>>('movieList')
 
 const movieId = computed(() => Number(route.params.id as string) - 1)
 const movie = ref(movieList!.value[movieId.value])
