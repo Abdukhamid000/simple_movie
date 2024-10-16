@@ -2,7 +2,7 @@
   <div>
     <v-row class="mt-3">
       <template v-if="!favoriteMovies.length">No Favorite Movies</template>
-      <v-col v-for="movie in favoriteMovies" :key="movie.id" cols="12" md="4">
+      <v-col v-for="movie in favoriteMovies" :key="movie.id" cols="12" md="2">
         <v-card>
           <v-img :src="movie.posterImage"></v-img>
           <v-card-title>{{ movie.title }}</v-card-title>
