@@ -38,3 +38,4 @@ pnpm build
 pnpm lint
 ```
 # vuetefy_template
+# simple_movie
